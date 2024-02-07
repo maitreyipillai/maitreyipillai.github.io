@@ -8,12 +8,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: research.qmd
       - text: Research
-        menu:
-          - href: working papers.qmd
-            text: Working Papers 
-          - href: peer-reviewed research.qmd
-            text: Peer-reviewed Research 
       - href: project.qmd
         text: Project
       - href: cv.pdf
@@ -24,6 +20,11 @@ website:
             text: assignment1
           - href: assignment2.qmd
             text: assignment2
+            menu: 
+              - href: Lab01.qmd
+              - text: Lab01.qmd
+              - href: Lab02.qmd
+              - text: Lab02.qmd
           - href: assignment3.qmd
             text: assignment3
 
