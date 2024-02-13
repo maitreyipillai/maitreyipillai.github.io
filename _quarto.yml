@@ -7,26 +7,26 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
       - href: research.qmd
-      - text: Research
+        text: Research
       - href: project.qmd
         text: Project
       - href: cv.pdf
         text: CV
       - text: Assignments
         menu:
-          - href: assignment1.qmd
-            text: assignment1
-          - href: assignment2.qmd
-            text: assignment2
-            menu: 
-              - href: Lab01.qmd
-              - text: Lab01.qmd
-              - href: Lab02.qmd
-              - text: Lab02.qmd
-          - href: assignment3.qmd
-            text: assignment3
+        - href: assignment1.qmd
+          text: Assignment 1
+        - href: assignment2.qmd
+          text: Assignment 2
+        - href: Lab01.qmd
+          text: Lab01
+        - href: Lab02.qmd
+          text: Lab02
+        - href: assignment3.qmd
+          text: Assignment3
 
 format:
   html:

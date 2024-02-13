@@ -1,0 +1,93 @@
+---
+title: "assignment2"
+---
+
+```{r}
+
+library(haven)
+url <- "https://raw.githubusercontent.com/datageneration/home/master/DataProgramming/data/TEDS_2016.dta"
+TEDS_2016 <- read_stata(url)
+
+```
+
+```{r}
+str(TEDS_2016)
+```
+
+## How do you deal with missing values?
+
+```{r}
+# Remove rows with any missing values
+data_clean <- na.omit(TEDS_2016)
+
+# Remove rows with missing values in specific columns
+data_clean <- TEDS_2016[complete.cases(TEDS_2016$female, TEDS_2016$DPP, TEDS_2016$age, TEDS_2016$income, TEDS_2016$edu, TEDS_2016$Taiwanese, TEDS_2016$Econ_worse), ]
+
+```
+
+## 
+
+Regression analysis
+
+```{r}
+model <- lm(PartyID ~ Age + Sex + lowincome + income + noparty, data = TEDS_2016)
+summary(model)
+```
+
+```{r}
+library(ggplot2)
+ggplot(TEDS_2016, aes(x = Tondu, fill = female)) + geom_bar(position = "fill") + labs(title = "Distribution of Tondu by Gender")
+ggplot(TEDS_2016, aes(x = Tondu, y = age)) + geom_boxplot() + labs(title = "Age distribution by Tondu category")
+cross_tab <- table(TEDS_2016$Tondu, TEDS_2016$DPP)
+cross_tab
+
+chisq.test(cross_tab)
+
+anova_model <- aov(age ~ Tondu, data = TEDS_2016)
+summary(anova_model)
+
+
+```
+
+## How about the *votesai* variable?
+
+```{r}
+library(ggplot2)
+ggplot(TEDS_2016, aes(x = votetsai, fill = female)) + geom_bar(position = "fill") + labs(title = "Distribution of votetsai by Gender")
+TEDS_2016 <- na.omit(TEDS_2016)
+ggplot(TEDS_2016, aes(x = votetsai, y = age)) + 
+  geom_boxplot() + 
+  labs(title = "Age distribution by votetsai")
+cross_tab <- table(TEDS_2016$votetsai, TEDS_2016$DPP)
+cross_tab
+chisq.test(cross_tab)
+correlation <- cor.test(TEDS_2016$votetsai, TEDS_2016$age)
+correlation
+```
+
+## Frequency table and bar chart
+
+```{r}
+# Assigning labels to Tondu variable
+TEDS_2016$Tondu <- factor(TEDS_2016$Tondu,
+                           labels = c("Immediate unification", 
+                                      "Maintain status quo, move toward unification",
+                                      "Maintain status quo, decide unification or independence",
+                                      "Maintain status quo forever",
+                                      "Move toward independence",
+                                      "Refuse to answer",
+                                      "No response"))
+
+# Frequency table
+tondu_freq <- table(TEDS_2016$Tondu)
+print(tondu_freq)
+
+# Bar chart
+library(ggplot2)
+ggplot(data = TEDS_2016, aes(x = Tondu)) +
+  geom_bar() +
+  labs(title = "Frequency of Tondu Categories",
+       x = "Tondu Categories",
+       y = "Frequency")
+
+```
