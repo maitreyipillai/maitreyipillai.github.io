@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maitreyi Pillai | Researcher & Educator</title>
-    <meta name="description" content="Researcher and Educator at The University of Texas at Dallas">
+    <meta name="description" content="Political Science Researcher and Educator at The University of Texas at Dallas">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="images/websitepic.jpg">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
        
         :root {
-            --accent: #3b82f6; /* Soft professional blue – clean and academic */
+            --accent: #1e40af; /* Deep professional navy blue */
         }
        
         body {
@@ -20,7 +20,7 @@
         }
        
         .hero-bg {
-            background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.85)), 
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.88)), 
                         url('images/websitepic.jpg') center/cover no-repeat;
             background-attachment: fixed;
         }
@@ -28,21 +28,22 @@
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
        
         .nav-link:hover {
-            color: #3b82f6;
+            color: var(--accent);
         }
        
         .nav-link:after {
             content: '';
             position: absolute;
             width: 0;
-            height: 2px;
-            bottom: -2px;
+            height: 1.5px;
+            bottom: -3px;
             left: 0;
-            background-color: #3b82f6;
-            transition: width 0.3s ease;
+            background-color: var(--accent);
+            transition: width 0.4s ease;
         }
        
         .nav-link:hover:after {
@@ -50,14 +51,21 @@
         }
        
         .section-title {
-            font-size: 2.75rem;
-            line-height: 1.1;
+            font-family: 'Playfair Display', sans-serif;
+            font-size: 2.8rem;
+            line-height: 1.15;
             font-weight: 500;
-            color: white;
+            color: #0f172a;
+            letter-spacing: -0.02em;
         }
        
         .content-card {
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+        }
+       
+        .content-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
        
         .accent-button {
@@ -65,244 +73,256 @@
         }
        
         .accent-button:hover {
-            background-color: #3b82f6;
+            background-color: var(--accent);
             color: white;
+            border-color: var(--accent);
         }
     </style>
 </head>
-<body class="bg-slate-950 text-white overflow-x-hidden">
-    
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden">
+
     <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-white/10">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <a href="#" onclick="smoothScrollTo('top')" class="flex items-center gap-x-3">
-                    <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-medium text-2xl">MP</div>
-                    <span class="text-2xl font-medium tracking-tight">Maitreyi</span>
+                <a href="#" onclick="smoothScrollTo('top')" class="text-2xl font-medium tracking-tight text-slate-900">
+                    Maitreyi Pillai
                 </a>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-x-9 text-base font-medium">
+                <div class="hidden md:flex items-center gap-x-8 text-base font-medium">
                     <a href="#" onclick="smoothScrollTo('top')" class="nav-link">Home</a>
-                    <a href="#" onclick="smoothScrollTo('research-teaching')" class="nav-link">Research &amp; Teaching</a>
-                    <a href="#" onclick="smoothScrollTo('cv-coursework')" class="nav-link">CV &amp; Coursework</a>
+                    <a href="#" onclick="smoothScrollTo('research')" class="nav-link">Research</a>
+                    <a href="#" onclick="smoothScrollTo('teaching')" class="nav-link">Teaching</a>
+                    <a href="#" onclick="smoothScrollTo('cv')" class="nav-link">CV</a>
+                    <a href="#" onclick="smoothScrollTo('coursework')" class="nav-link">Coursework</a>
                     <a href="#" onclick="smoothScrollTo('contact')" class="nav-link">Contact</a>
                 </div>
 
                 <!-- Social Icons -->
-                <div class="flex items-center gap-x-5">
-                    <a href="https://github.com/maitreyipillai" target="_blank" class="text-2xl hover:text-blue-400 transition-colors">
+                <div class="flex items-center gap-x-6 text-xl">
+                    <a href="https://github.com/maitreyipillai" target="_blank" class="text-slate-600 hover:text-slate-900 transition-colors">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/maitreyi-p-245a63187/" target="_blank" class="text-2xl hover:text-blue-400 transition-colors">
+                    <a href="https://www.linkedin.com/in/maitreyi-p-245a63187/" target="_blank" class="text-slate-600 hover:text-slate-900 transition-colors">
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl">
+                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-slate-700">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-white/10 py-5">
-            <div class="flex flex-col px-8 gap-y-5 text-lg font-medium">
-                <a href="#" onclick="toggleMobileMenu();smoothScrollTo('top')" class="hover:text-blue-400">Home</a>
-                <a href="#" onclick="toggleMobileMenu();smoothScrollTo('research-teaching')" class="hover:text-blue-400">Research &amp; Teaching</a>
-                <a href="#" onclick="toggleMobileMenu();smoothScrollTo('cv-coursework')" class="hover:text-blue-400">CV &amp; Coursework</a>
-                <a href="#" onclick="toggleMobileMenu();smoothScrollTo('contact')" class="hover:text-blue-400">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 py-6">
+            <div class="flex flex-col px-8 gap-y-6 text-lg font-medium">
+                <a href="#" onclick="toggleMobileMenu();smoothScrollTo('top')" class="hover:text-blue-700">Home</a>
+                <a href="#" onclick="toggleMobileMenu();smoothScrollTo('research')" class="hover:text-blue-700">Research</a>
+                <a href="#" onclick="toggleMobileMenu();smoothScrollTo('teaching')" class="hover:text-blue-700">Teaching</a>
+                <a href="#" onclick="toggleMobileMenu();smoothScrollTo('cv')" class="hover:text-blue-700">CV</a>
+                <a href="#" onclick="toggleMobileMenu();smoothScrollTo('coursework')" class="hover:text-blue-700">Coursework</a>
+                <a href="#" onclick="toggleMobileMenu();smoothScrollTo('contact')" class="hover:text-blue-700">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO / HOME – Full background image, clean and centered -->
-    <section id="top" class="hero-bg min-h-screen flex items-center">
+    <!-- HERO -->
+    <section id="top" class="hero-bg min-h-screen flex items-center text-white">
         <div class="max-w-4xl mx-auto px-8 text-center">
             <div class="max-w-2xl mx-auto">
-                <h1 class="text-6xl md:text-7xl font-medium leading-none tracking-tighter mb-4">
+                <h1 class="text-6xl md:text-7xl font-medium leading-none tracking-tighter mb-6">
                     Maitreyi Pillai
                 </h1>
-                <p class="text-3xl text-slate-300 mb-8">
+                <p class="text-3xl text-slate-200 mb-6">
                     Researcher &amp; Educator
                 </p>
-                <p class="text-xl text-slate-400 max-w-lg mx-auto mb-12">
-                    The University of Texas at Dallas • Dedicated to research, teaching, and academic growth.
+                <p class="text-xl text-slate-300 max-w-lg mx-auto mb-12">
+                    School of Economic, Political and Policy Sciences<br>
+                    The University of Texas at Dallas
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="https://github.com/maitreyipillai" target="_blank"
-                       class="accent-button px-10 py-6 bg-white text-slate-950 font-medium text-lg rounded-3xl flex items-center justify-center gap-x-3">
+                       class="accent-button px-10 py-5 border-2 border-white font-medium text-lg rounded-3xl flex items-center justify-center gap-x-3">
                         <i class="fab fa-github"></i>
                         <span>GitHub</span>
                     </a>
-                    
                     <a href="#contact" onclick="smoothScrollTo('contact')"
-                       class="px-10 py-6 border-2 border-white/70 hover:border-white font-medium text-lg rounded-3xl">
+                       class="px-10 py-5 bg-white text-slate-900 font-medium text-lg rounded-3xl hover:bg-slate-100">
                         Get in Touch
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-12 left-1/2 flex flex-col items-center gap-y-1 text-xs tracking-widest text-slate-400">
+        <div class="absolute bottom-12 left-1/2 flex flex-col items-center gap-y-1 text-xs tracking-widest text-slate-300">
             SCROLL
             <i class="fas fa-chevron-down text-xl animate-bounce"></i>
         </div>
     </section>
 
-    <!-- RESEARCH & TEACHING -->
-    <section id="research-teaching" class="py-24 bg-slate-900">
-        <div class="max-w-6xl mx-auto px-8">
+    <!-- RESEARCH -->
+    <section id="research" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-8">
             <div class="text-center mb-16">
-                <span class="uppercase tracking-[2px] text-sm font-medium text-blue-400">Research &amp; Teaching</span>
-                <h2 class="section-title mt-3">Curiosity, knowledge, and learning</h2>
+                <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Research</span>
+                <h2 class="section-title mt-4">Advancing Knowledge in Political Science</h2>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Research -->
-                <div class="content-card bg-slate-800 p-10 rounded-3xl">
-                    <div class="flex items-center gap-x-4 mb-6">
-                        <i class="fas fa-flask text-4xl text-blue-400"></i>
-                        <h3 class="text-3xl font-medium">Research</h3>
-                    </div>
-                    <p class="text-slate-300 leading-relaxed">
-                        <!-- TODO: Replace with your actual research description -->
-                        My research focuses on [your research area]. I explore [key topics] and collaborate on projects that advance knowledge in [field].
-                    </p>
-                    <div class="mt-8 flex flex-wrap gap-3">
-                        <!-- TODO: Add your research tags -->
-                        <span class="bg-slate-700 text-slate-300 px-5 py-2 rounded-3xl text-sm">Research Topic 1</span>
-                        <span class="bg-slate-700 text-slate-300 px-5 py-2 rounded-3xl text-sm">Research Topic 2</span>
-                        <span class="bg-slate-700 text-slate-300 px-5 py-2 rounded-3xl text-sm">Research Topic 3</span>
-                    </div>
-                </div>
-                
-                <!-- Teaching -->
-                <div class="content-card bg-slate-800 p-10 rounded-3xl">
-                    <div class="flex items-center gap-x-4 mb-6">
-                        <i class="fas fa-chalkboard-teacher text-4xl text-blue-400"></i>
-                        <h3 class="text-3xl font-medium">Teaching</h3>
-                    </div>
-                    <p class="text-slate-300 leading-relaxed">
-                        <!-- TODO: Replace with your actual teaching description -->
-                        I believe in creating engaging learning experiences. I have taught or assisted in [course names] and enjoy guiding students through complex concepts.
-                    </p>
-                    <div class="mt-8 space-y-5">
-                        <!-- TODO: Add your teaching items -->
-                        <div class="flex gap-x-4">
-                            <i class="fas fa-circle text-blue-400 text-sm mt-1.5"></i>
-                            <div>
-                                <p class="font-medium">Course / Role 1</p>
-                                <p class="text-slate-400 text-sm">Semester • Brief description</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-x-4">
-                            <i class="fas fa-circle text-blue-400 text-sm mt-1.5"></i>
-                            <div>
-                                <p class="font-medium">Course / Role 2</p>
-                                <p class="text-slate-400 text-sm">Semester • Brief description</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+                <p class="mb-8">
+                    My research interests lie at the intersection of political behavior, gender and politics, and public policy. 
+                    I explore how structural and cultural factors shape political outcomes, with a particular focus on issues of equity and representation.
+                </p>
+                <!-- Add your actual research description here -->
+                <p>I am currently involved in projects examining [specific topics, e.g., political psychology, climate policy and gender, or American institutions].</p>
+            </div>
+            
+            <div class="mt-12 flex flex-wrap gap-3 justify-center">
+                <!-- Add your research tags -->
+                <span class="bg-slate-100 text-slate-700 px-6 py-2.5 rounded-3xl text-sm font-medium">Political Psychology</span>
+                <span class="bg-slate-100 text-slate-700 px-6 py-2.5 rounded-3xl text-sm font-medium">Gender &amp; Politics</span>
+                <span class="bg-slate-100 text-slate-700 px-6 py-2.5 rounded-3xl text-sm font-medium">American Institutions</span>
+                <span class="bg-slate-100 text-slate-700 px-6 py-2.5 rounded-3xl text-sm font-medium">Public Policy</span>
             </div>
         </div>
     </section>
 
-    <!-- CV & COURSEWORK -->
-    <section id="cv-coursework" class="py-24 bg-slate-950">
-        <div class="max-w-6xl mx-auto px-8">
+    <!-- TEACHING -->
+    <section id="teaching" class="py-24 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-8">
             <div class="text-center mb-16">
-                <span class="uppercase tracking-[2px] text-sm font-medium text-blue-400">CV &amp; Coursework</span>
-                <h2 class="section-title mt-3">My academic journey</h2>
+                <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Teaching</span>
+                <h2 class="section-title mt-4">Fostering Critical Thinking and Engagement</h2>
             </div>
             
-            <!-- CV Button -->
-            <div class="max-w-md mx-auto mb-20 text-center">
-                <a href="CVwebsite.pdf" target="_blank"
-                   class="accent-button inline-flex items-center justify-center gap-x-4 px-14 py-8 bg-white text-slate-950 font-medium text-2xl rounded-3xl w-full hover:scale-105">
-                    <span>Download Full CV</span>
-                    <i class="fas fa-download text-3xl"></i>
-                </a>
-                <p class="mt-6 text-slate-400 text-sm">Opens CVwebsite.pdf in a new tab</p>
+            <div class="prose prose-lg max-w-none text-slate-700">
+                <p class="mb-10">
+                    As a Teaching Assistant at UT Dallas, I am passionate about creating inclusive and intellectually stimulating learning environments. 
+                    I support students in developing analytical skills essential for understanding political systems and processes.
+                </p>
             </div>
             
-            <!-- Coursework -->
-            <div>
-                <h3 class="text-2xl font-medium text-center mb-10">Selected Coursework</h3>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- TODO: Replace these with your actual courses -->
-                    <div class="content-card bg-slate-900 p-8 rounded-3xl text-center">
-                        <p class="text-blue-400 text-sm font-medium mb-2">COURSE</p>
-                        <p class="font-medium text-xl mb-2">Course Title 1</p>
-                        <p class="text-slate-400">Semester • Description or grade</p>
+            <div class="space-y-10">
+                <!-- Add your actual teaching experience here -->
+                <div class="flex gap-8">
+                    <div class="w-28 flex-shrink-0">
+                        <p class="font-medium text-blue-800">American National Government</p>
+                        <p class="text-sm text-slate-500">Teaching Assistant</p>
                     </div>
-                    <div class="content-card bg-slate-900 p-8 rounded-3xl text-center">
-                        <p class="text-blue-400 text-sm font-medium mb-2">COURSE</p>
-                        <p class="font-medium text-xl mb-2">Course Title 2</p>
-                        <p class="text-slate-400">Semester • Description or grade</p>
-                    </div>
-                    <div class="content-card bg-slate-900 p-8 rounded-3xl text-center">
-                        <p class="text-blue-400 text-sm font-medium mb-2">COURSE</p>
-                        <p class="font-medium text-xl mb-2">Course Title 3</p>
-                        <p class="text-slate-400">Semester • Description or grade</p>
+                    <div class="flex-1 text-slate-600">
+                        Supported undergraduate students in core concepts of American political institutions, federalism, and civic participation.
                     </div>
                 </div>
+                
+                <!-- Add more entries as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <div class="mb-16">
+                <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Curriculum Vitae</span>
+                <h2 class="section-title mt-4">Academic Journey &amp; Qualifications</h2>
+            </div>
+            
+            <a href="CVwebsite.pdf" target="_blank"
+               class="inline-flex items-center justify-center gap-x-4 px-16 py-8 bg-slate-900 text-white font-medium text-xl rounded-3xl hover:bg-slate-800 transition-all hover:scale-[1.02]">
+                <span>Download Full CV</span>
+                <i class="fas fa-download text-2xl"></i>
+            </a>
+            
+            <p class="mt-8 text-slate-500">PDF opens in a new tab</p>
+        </div>
+    </section>
+
+    <!-- COURSEWORK -->
+    <section id="coursework" class="py-24 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Selected Coursework</span>
+                <h2 class="section-title mt-4">Graduate &amp; Undergraduate Training</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Replace with your actual courses -->
+                <div class="content-card bg-white p-10 rounded-3xl border border-slate-200">
+                    <p class="text-blue-800 font-medium mb-2">POLITICAL SCIENCE</p>
+                    <p class="font-semibold text-xl mb-3">Political Psychology</p>
+                    <p class="text-slate-600">Advanced seminar exploring psychological foundations of political behavior and decision-making.</p>
+                </div>
+                
+                <div class="content-card bg-white p-10 rounded-3xl border border-slate-200">
+                    <p class="text-blue-800 font-medium mb-2">AMERICAN GOVERNMENT</p>
+                    <p class="font-semibold text-xl mb-3">American National Government</p>
+                    <p class="text-slate-600">Core course on U.S. political institutions, processes, and public policy formation.</p>
+                </div>
+                
+                <!-- Add more cards as needed -->
             </div>
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-24 bg-slate-900">
+    <section id="contact" class="py-24 bg-slate-900 text-white">
         <div class="max-w-2xl mx-auto px-8 text-center">
-            <span class="uppercase tracking-[2px] text-sm font-medium text-blue-400">Let's Connect</span>
-            <h2 class="section-title mt-3 mb-6">Interested in collaborating?</h2>
-            <p class="text-xl text-slate-400 mb-12">Whether it's research, teaching opportunities, or academic discussions, I’d love to hear from you.</p>
+            <span class="uppercase tracking-[3px] text-sm font-medium text-blue-400">Let's Connect</span>
+            <h2 class="section-title mt-4 mb-8 text-white">Interested in collaboration or discussion?</h2>
+            <p class="text-xl text-slate-400 mb-14">
+                Whether you are a fellow researcher, student, or colleague, I welcome opportunities for academic exchange.
+            </p>
             
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <a href="https://www.linkedin.com/in/maitreyi-p-245a63187/" target="_blank"
-                   class="flex flex-col items-center gap-y-3 bg-slate-800 hover:bg-slate-700 rounded-3xl py-8 transition-colors">
+                   class="flex flex-col items-center gap-y-4 bg-slate-800 hover:bg-slate-700 p-8 rounded-3xl transition-colors">
                     <i class="fab fa-linkedin text-4xl"></i>
-                    <div class="font-medium">LinkedIn</div>
-                    <div class="text-slate-400 text-sm">Connect professionally</div>
+                    <div>
+                        <div class="font-medium">LinkedIn</div>
+                        <div class="text-sm text-slate-400">Professional network</div>
+                    </div>
                 </a>
                 
                 <a href="https://github.com/maitreyipillai" target="_blank"
-                   class="flex flex-col items-center gap-y-3 bg-slate-800 hover:bg-slate-700 rounded-3xl py-8 transition-colors">
+                   class="flex flex-col items-center gap-y-4 bg-slate-800 hover:bg-slate-700 p-8 rounded-3xl transition-colors">
                     <i class="fab fa-github text-4xl"></i>
-                    <div class="font-medium">GitHub</div>
-                    <div class="text-slate-400 text-sm">View my work</div>
+                    <div>
+                        <div class="font-medium">GitHub</div>
+                        <div class="text-sm text-slate-400">Code &amp; projects</div>
+                    </div>
                 </a>
                 
                 <a href="mailto:maitreyi.pillai@utdallas.edu"
-                   class="flex flex-col items-center gap-y-3 bg-slate-800 hover:bg-slate-700 rounded-3xl py-8 transition-colors">
+                   class="flex flex-col items-center gap-y-4 bg-slate-800 hover:bg-slate-700 p-8 rounded-3xl transition-colors">
                     <i class="fas fa-envelope text-4xl"></i>
-                    <div class="font-medium">Email</div>
-                    <div class="text-slate-400 text-sm">maitreyi.pillai@utdallas.edu</div>
+                    <div>
+                        <div class="font-medium">Email</div>
+                        <div class="text-sm text-slate-400">maitreyi.pillai@utdallas.edu</div>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-slate-950 py-12 border-t border-white/10">
-        <div class="max-w-6xl mx-auto px-8 text-center text-slate-400 text-sm">
-            <div class="flex justify-center gap-x-8 text-2xl mb-6">
-                <a href="https://github.com/maitreyipillai" target="_blank" class="hover:text-blue-400"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/maitreyi-p-245a63187/" target="_blank" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+    <footer class="bg-slate-950 py-12 border-t border-white/10 text-slate-400 text-sm">
+        <div class="max-w-6xl mx-auto px-8 text-center">
+            <div class="flex justify-center gap-x-8 text-2xl mb-8">
+                <a href="https://github.com/maitreyipillai" target="_blank" class="hover:text-white"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/maitreyi-p-245a63187/" target="_blank" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>© 2026 Maitreyi Pillai • Made with care</p>
+            <p>© 2026 Maitreyi Pillai • The University of Texas at Dallas</p>
         </div>
     </footer>
 
     <script>
         function toggleMobileMenu() {
-            const menu = document.getElementById("mobile-menu");
-            menu.classList.toggle("hidden");
+            document.getElementById("mobile-menu").classList.toggle("hidden");
         }
 
         function smoothScrollTo(section) {
@@ -318,13 +338,10 @@
             }
         }
 
-        // Simple keyboard support
         document.addEventListener('keydown', function(e) {
             if (e.key === "Escape") {
                 const mobileMenu = document.getElementById("mobile-menu");
-                if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
-                    mobileMenu.classList.add("hidden");
-                }
+                if (mobileMenu && !mobileMenu.classList.contains("hidden")) mobileMenu.classList.add("hidden");
             }
         });
     </script>
