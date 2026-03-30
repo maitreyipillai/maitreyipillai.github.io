@@ -10,31 +10,31 @@
     <link rel="icon" type="image/png" href="images/websitepic.jpg">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
-       
+      
         :root {
             --accent: #1e40af; /* Deep professional navy */
         }
-       
+      
         body {
             font-family: 'Inter', system_ui, sans-serif;
         }
-       
+      
         .hero-bg {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.88)), 
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.88)),
                         url('images/websitepic.jpg') center/cover no-repeat;
             background-attachment: fixed;
         }
-       
+      
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
             font-weight: 500;
         }
-       
+      
         .nav-link:hover {
             color: var(--accent);
         }
-       
+      
         .nav-link:after {
             content: '';
             position: absolute;
@@ -45,11 +45,11 @@
             background-color: var(--accent);
             transition: width 0.4s ease;
         }
-       
+      
         .nav-link:hover:after {
             width: 100%;
         }
-       
+      
         .section-title {
             font-family: 'Playfair Display', sans-serif;
             font-size: 2.75rem;
@@ -58,24 +58,31 @@
             color: #0f172a;
             letter-spacing: -0.02em;
         }
-       
+      
         .content-card {
             transition: all 0.4s ease;
         }
-       
+      
         .accent-button {
             transition: all 0.3s ease;
         }
-       
+      
         .accent-button:hover {
             background-color: var(--accent);
             color: white;
             border-color: var(--accent);
         }
+
+        /* Refined hero bio text – smaller, lighter, and more elegant */
+        .hero-bio {
+            font-size: 1.05rem; /* Smaller than before (was ~1.125rem / text-lg) */
+            line-height: 1.75;
+            font-weight: 400; /* Clean, non-bold weight for a classy feel */
+            letter-spacing: -0.01em;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 overflow-x-hidden">
-
     <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-8">
@@ -83,7 +90,7 @@
                 <a href="#" onclick="smoothScrollTo('top')" class="text-2xl font-medium tracking-tight text-slate-900">
                     Maitreyi Pillai
                 </a>
-                
+               
                 <div class="hidden md:flex items-center gap-x-8 text-base font-medium">
                     <a href="#" onclick="smoothScrollTo('top')" class="nav-link">Home</a>
                     <a href="#" onclick="smoothScrollTo('research')" class="nav-link">Research</a>
@@ -92,7 +99,6 @@
                     <a href="#" onclick="smoothScrollTo('coursework')" class="nav-link">Coursework</a>
                     <a href="#" onclick="smoothScrollTo('contact')" class="nav-link">Contact</a>
                 </div>
-
                 <div class="flex items-center gap-x-6 text-xl">
                     <a href="https://github.com/maitreyipillai" target="_blank" class="text-slate-600 hover:text-slate-900 transition-colors">
                         <i class="fab fa-github"></i>
@@ -101,13 +107,11 @@
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
-
                 <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-slate-700">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
-
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 py-6">
             <div class="flex flex-col px-8 gap-y-6 text-lg font-medium">
                 <a href="#" onclick="toggleMobileMenu();smoothScrollTo('top')" class="hover:text-blue-700">Home</a>
@@ -130,7 +134,9 @@
                 <p class="text-2xl text-slate-200 mb-8">
                     PhD Candidate in Political Science
                 </p>
-                <div class="max-w-2xl mx-auto text-lg text-slate-200 leading-relaxed">
+                
+                <!-- Updated bio text: smaller, classier, and more elegant -->
+                <div class="max-w-2xl mx-auto hero-bio text-slate-200">
                     <p class="mb-6">
                         I am a PhD student in Political Science at the University of Texas at Dallas, specializing in international relations, and I expect to complete my degree in May 2027. My research focuses at the crux of International Conflict and Human Rights. In my dissertation I aim to examine the relationship between International conflict and Human rights in the lens of the augment in AI.
                     </p>
@@ -141,7 +147,7 @@
                         I hold a Master’s in Social Data Analytics Research & Political Science. I also hold a Bachelor of Arts in French Literature.
                     </p>
                 </div>
-                
+               
                 <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
                     <a href="https://github.com/maitreyipillai" target="_blank"
                        class="accent-button px-10 py-5 border-2 border-white font-medium text-lg rounded-3xl flex items-center justify-center gap-x-3">
@@ -155,7 +161,6 @@
                 </div>
             </div>
         </div>
-
         <div class="absolute bottom-12 left-1/2 flex flex-col items-center gap-y-1 text-xs tracking-widest text-slate-300">
             SCROLL
             <i class="fas fa-chevron-down text-xl animate-bounce"></i>
@@ -182,10 +187,10 @@
                 <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Teaching</span>
                 <h2 class="section-title mt-4">Teaching Experience</h2>
             </div>
-            
+           
             <div class="max-w-3xl mx-auto bg-white border border-slate-200 rounded-3xl p-10 shadow-sm">
                 <h3 class="text-2xl font-semibold text-slate-900 mb-8">Teaching Assistant • 2022 – Present</h3>
-                
+               
                 <ul class="space-y-4 text-slate-700">
                     <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PSCI 4328</span> Fake News (Spring 2026)</li>
                     <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PSCI 4320</span> Political Psychology (Fall 2025)</li>
@@ -198,7 +203,6 @@
                     <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">GOVT 2305</span> American National Government (2 courses) (Fall 2022)</li>
                     <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">GOVT 2306</span> State and Local Government (Fall 2022)</li>
                 </ul>
-
                 <div class="mt-12 pt-10 border-t border-slate-200">
                     <h4 class="text-xl font-semibold text-slate-900 mb-6">Guest Lectures</h4>
                     <div class="space-y-6 text-slate-700">
@@ -223,7 +227,7 @@
                 <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Curriculum Vitae</span>
                 <h2 class="section-title mt-4">Academic Qualifications</h2>
             </div>
-            
+           
             <a href="CVwebsite.pdf" target="_blank"
                class="inline-flex items-center justify-center gap-x-4 px-16 py-8 bg-slate-900 text-white font-medium text-xl rounded-3xl hover:bg-slate-800 transition-all hover:scale-[1.02]">
                 <span>Download Full CV</span>
@@ -250,7 +254,7 @@
             <span class="uppercase tracking-[3px] text-sm font-medium text-blue-400">Let's Connect</span>
             <h2 class="section-title mt-4 mb-8 text-white">Open to Collaboration</h2>
             <p class="text-xl text-slate-400 mb-14">Research discussions, teaching opportunities, or academic exchange are always welcome.</p>
-            
+           
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <a href="https://www.linkedin.com/in/maitreyi-p-245a63187/" target="_blank" class="flex flex-col items-center gap-y-4 bg-slate-800 hover:bg-slate-700 p-8 rounded-3xl transition-colors">
                     <i class="fab fa-linkedin text-4xl"></i>
@@ -283,7 +287,6 @@
         function toggleMobileMenu() {
             document.getElementById("mobile-menu").classList.toggle("hidden");
         }
-
         function smoothScrollTo(section) {
             if (section === "top") {
                 window.scrollTo({ top: 0, behavior: "smooth" });
@@ -296,7 +299,6 @@
                 mobileMenu.classList.add("hidden");
             }
         }
-
         document.addEventListener('keydown', function(e) {
             if (e.key === "Escape") {
                 const mobileMenu = document.getElementById("mobile-menu");
