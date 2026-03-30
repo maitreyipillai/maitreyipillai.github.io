@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maitreyi Pillai | Researcher & Educator</title>
-    <meta name="description" content="Political Science Researcher and Educator at The University of Texas at Dallas">
+    <title>Maitreyi Pillai | Political Science Researcher & Educator</title>
+    <meta name="description" content="PhD Candidate in Political Science at The University of Texas at Dallas">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="images/websitepic.jpg">
@@ -12,7 +12,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
        
         :root {
-            --accent: #1e40af; /* Deep professional navy blue */
+            --accent: #1e40af; /* Deep professional navy */
         }
        
         body {
@@ -52,7 +52,7 @@
        
         .section-title {
             font-family: 'Playfair Display', sans-serif;
-            font-size: 2.8rem;
+            font-size: 2.75rem;
             line-height: 1.15;
             font-weight: 500;
             color: #0f172a;
@@ -61,11 +61,6 @@
        
         .content-card {
             transition: all 0.4s ease;
-        }
-       
-        .content-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
        
         .accent-button {
@@ -85,12 +80,10 @@
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
                 <a href="#" onclick="smoothScrollTo('top')" class="text-2xl font-medium tracking-tight text-slate-900">
                     Maitreyi Pillai
                 </a>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-x-8 text-base font-medium">
                     <a href="#" onclick="smoothScrollTo('top')" class="nav-link">Home</a>
                     <a href="#" onclick="smoothScrollTo('research')" class="nav-link">Research</a>
@@ -100,7 +93,6 @@
                     <a href="#" onclick="smoothScrollTo('contact')" class="nav-link">Contact</a>
                 </div>
 
-                <!-- Social Icons -->
                 <div class="flex items-center gap-x-6 text-xl">
                     <a href="https://github.com/maitreyipillai" target="_blank" class="text-slate-600 hover:text-slate-900 transition-colors">
                         <i class="fab fa-github"></i>
@@ -110,14 +102,12 @@
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-slate-700">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 py-6">
             <div class="flex flex-col px-8 gap-y-6 text-lg font-medium">
                 <a href="#" onclick="toggleMobileMenu();smoothScrollTo('top')" class="hover:text-blue-700">Home</a>
@@ -133,19 +123,26 @@
     <!-- HERO -->
     <section id="top" class="hero-bg min-h-screen flex items-center text-white">
         <div class="max-w-4xl mx-auto px-8 text-center">
-            <div class="max-w-2xl mx-auto">
-                <h1 class="text-6xl md:text-7xl font-medium leading-none tracking-tighter mb-6">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-medium leading-none tracking-tighter mb-6">
                     Maitreyi Pillai
                 </h1>
-                <p class="text-3xl text-slate-200 mb-6">
-                    Researcher &amp; Educator
+                <p class="text-2xl text-slate-200 mb-8">
+                    PhD Candidate in Political Science
                 </p>
-                <p class="text-xl text-slate-300 max-w-lg mx-auto mb-12">
-                    School of Economic, Political and Policy Sciences<br>
-                    The University of Texas at Dallas
-                </p>
+                <div class="max-w-2xl mx-auto text-lg text-slate-200 leading-relaxed">
+                    <p class="mb-6">
+                        I am a PhD student in Political Science at the University of Texas at Dallas, specializing in international relations, and I expect to complete my degree in May 2027. My research focuses at the crux of International Conflict and Human Rights. In my dissertation I aim to examine the relationship between International conflict and Human rights in the lens of the augment in AI.
+                    </p>
+                    <p class="mb-6">
+                        Before starting my PhD, I interned for the National Maritime Foundation of India, assisting researchers and Indian navy admiral/s in their projects. Prior to this, I used to be a certified French Language Instructor from Université de Mans & Alliance Française de Bombay and worked in the south of France for a year as a language teaching assistant.
+                    </p>
+                    <p>
+                        I hold a Master’s in Social Data Analytics Research & Political Science. I also hold a Bachelor of Arts in French Literature.
+                    </p>
+                </div>
                 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
                     <a href="https://github.com/maitreyipillai" target="_blank"
                        class="accent-button px-10 py-5 border-2 border-white font-medium text-lg rounded-3xl flex items-center justify-center gap-x-3">
                         <i class="fab fa-github"></i>
@@ -170,24 +167,10 @@
         <div class="max-w-4xl mx-auto px-8">
             <div class="text-center mb-16">
                 <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Research</span>
-                <h2 class="section-title mt-4">Advancing Knowledge in Political Science</h2>
+                <h2 class="section-title mt-4">International Conflict, Human Rights & AI</h2>
             </div>
-            
             <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
-                <p class="mb-8">
-                    My research interests lie at the intersection of political behavior, gender and politics, and public policy. 
-                    I explore how structural and cultural factors shape political outcomes, with a particular focus on issues of equity and representation.
-                </p>
-                <!-- Add your actual research description here -->
-                <p>I am currently involved in projects examining [specific topics, e.g., political psychology, climate policy and gender, or American institutions].</p>
-            </div>
-            
-            <div class="mt-12 flex flex-wrap gap-3 justify-center">
-                <!-- Add your research tags -->
-                <span class="bg-slate-100 text-slate-700 px-6 py-2.5 rounded-3xl text-sm font-medium">Political Psychology</span>
-                <span class="bg-slate-100 text-slate-700 px-6 py-2.5 rounded-3xl text-sm font-medium">Gender &amp; Politics</span>
-                <span class="bg-slate-100 text-slate-700 px-6 py-2.5 rounded-3xl text-sm font-medium">American Institutions</span>
-                <span class="bg-slate-100 text-slate-700 px-6 py-2.5 rounded-3xl text-sm font-medium">Public Policy</span>
+                <p>Your detailed research description goes here. Feel free to expand on your dissertation, ongoing projects, or publications.</p>
             </div>
         </div>
     </section>
@@ -197,29 +180,38 @@
         <div class="max-w-4xl mx-auto px-8">
             <div class="text-center mb-16">
                 <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Teaching</span>
-                <h2 class="section-title mt-4">Fostering Critical Thinking and Engagement</h2>
+                <h2 class="section-title mt-4">Teaching Experience</h2>
             </div>
             
-            <div class="prose prose-lg max-w-none text-slate-700">
-                <p class="mb-10">
-                    As a Teaching Assistant at UT Dallas, I am passionate about creating inclusive and intellectually stimulating learning environments. 
-                    I support students in developing analytical skills essential for understanding political systems and processes.
-                </p>
-            </div>
-            
-            <div class="space-y-10">
-                <!-- Add your actual teaching experience here -->
-                <div class="flex gap-8">
-                    <div class="w-28 flex-shrink-0">
-                        <p class="font-medium text-blue-800">American National Government</p>
-                        <p class="text-sm text-slate-500">Teaching Assistant</p>
-                    </div>
-                    <div class="flex-1 text-slate-600">
-                        Supported undergraduate students in core concepts of American political institutions, federalism, and civic participation.
+            <div class="max-w-3xl mx-auto bg-white border border-slate-200 rounded-3xl p-10 shadow-sm">
+                <h3 class="text-2xl font-semibold text-slate-900 mb-8">Teaching Assistant • 2022 – Present</h3>
+                
+                <ul class="space-y-4 text-slate-700">
+                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PSCI 4328</span> Fake News (Spring 2026)</li>
+                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PSCI 4320</span> Political Psychology (Fall 2025)</li>
+                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">GOVT 2306</span> State and Local Government (Summer 2025)</li>
+                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PPPE 6328</span> Capstone in Cyber-Security and Policy (Spring 2025)</li>
+                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PSCI 6350</span> Logic, Methodology and Scope of Political Science (Fall 2024)</li>
+                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">GOVT 2306</span> State and Local Government (Spring 2024)</li>
+                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PPPE 6301</span> Political Economic Theories (Fall 2023)</li>
+                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">EPPS 2301</span> Research Design in the Social and Policy Sciences (Spring 2023)</li>
+                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">GOVT 2305</span> American National Government (2 courses) (Fall 2022)</li>
+                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">GOVT 2306</span> State and Local Government (Fall 2022)</li>
+                </ul>
+
+                <div class="mt-12 pt-10 border-t border-slate-200">
+                    <h4 class="text-xl font-semibold text-slate-900 mb-6">Guest Lectures</h4>
+                    <div class="space-y-6 text-slate-700">
+                        <div>
+                            <p><span class="font-medium">PPPE 6304 – Open-Source Intelligence for Cyber Security and Policy</span> (Spring 2025)</p>
+                            <p class="text-sm text-slate-600 mt-1">Lecture on Digital Surveillance</p>
+                        </div>
+                        <div>
+                            <p><span class="font-medium">GOVT 2306 – State and Local Government</span></p>
+                            <p class="text-sm text-slate-600 mt-1">One lecture delivered</p>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Add more entries as needed -->
             </div>
         </div>
     </section>
@@ -229,7 +221,7 @@
         <div class="max-w-4xl mx-auto px-8 text-center">
             <div class="mb-16">
                 <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Curriculum Vitae</span>
-                <h2 class="section-title mt-4">Academic Journey &amp; Qualifications</h2>
+                <h2 class="section-title mt-4">Academic Qualifications</h2>
             </div>
             
             <a href="CVwebsite.pdf" target="_blank"
@@ -237,7 +229,6 @@
                 <span>Download Full CV</span>
                 <i class="fas fa-download text-2xl"></i>
             </a>
-            
             <p class="mt-8 text-slate-500">PDF opens in a new tab</p>
         </div>
     </section>
@@ -247,25 +238,9 @@
         <div class="max-w-4xl mx-auto px-8">
             <div class="text-center mb-16">
                 <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Selected Coursework</span>
-                <h2 class="section-title mt-4">Graduate &amp; Undergraduate Training</h2>
+                <h2 class="section-title mt-4">Graduate Training</h2>
             </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Replace with your actual courses -->
-                <div class="content-card bg-white p-10 rounded-3xl border border-slate-200">
-                    <p class="text-blue-800 font-medium mb-2">POLITICAL SCIENCE</p>
-                    <p class="font-semibold text-xl mb-3">Political Psychology</p>
-                    <p class="text-slate-600">Advanced seminar exploring psychological foundations of political behavior and decision-making.</p>
-                </div>
-                
-                <div class="content-card bg-white p-10 rounded-3xl border border-slate-200">
-                    <p class="text-blue-800 font-medium mb-2">AMERICAN GOVERNMENT</p>
-                    <p class="font-semibold text-xl mb-3">American National Government</p>
-                    <p class="text-slate-600">Core course on U.S. political institutions, processes, and public policy formation.</p>
-                </div>
-                
-                <!-- Add more cards as needed -->
-            </div>
+            <!-- Add your coursework cards here -->
         </div>
     </section>
 
@@ -273,37 +248,21 @@
     <section id="contact" class="py-24 bg-slate-900 text-white">
         <div class="max-w-2xl mx-auto px-8 text-center">
             <span class="uppercase tracking-[3px] text-sm font-medium text-blue-400">Let's Connect</span>
-            <h2 class="section-title mt-4 mb-8 text-white">Interested in collaboration or discussion?</h2>
-            <p class="text-xl text-slate-400 mb-14">
-                Whether you are a fellow researcher, student, or colleague, I welcome opportunities for academic exchange.
-            </p>
+            <h2 class="section-title mt-4 mb-8 text-white">Open to Collaboration</h2>
+            <p class="text-xl text-slate-400 mb-14">Research discussions, teaching opportunities, or academic exchange are always welcome.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <a href="https://www.linkedin.com/in/maitreyi-p-245a63187/" target="_blank"
-                   class="flex flex-col items-center gap-y-4 bg-slate-800 hover:bg-slate-700 p-8 rounded-3xl transition-colors">
+                <a href="https://www.linkedin.com/in/maitreyi-p-245a63187/" target="_blank" class="flex flex-col items-center gap-y-4 bg-slate-800 hover:bg-slate-700 p-8 rounded-3xl transition-colors">
                     <i class="fab fa-linkedin text-4xl"></i>
-                    <div>
-                        <div class="font-medium">LinkedIn</div>
-                        <div class="text-sm text-slate-400">Professional network</div>
-                    </div>
+                    <div><div class="font-medium">LinkedIn</div><div class="text-sm text-slate-400">Professional network</div></div>
                 </a>
-                
-                <a href="https://github.com/maitreyipillai" target="_blank"
-                   class="flex flex-col items-center gap-y-4 bg-slate-800 hover:bg-slate-700 p-8 rounded-3xl transition-colors">
+                <a href="https://github.com/maitreyipillai" target="_blank" class="flex flex-col items-center gap-y-4 bg-slate-800 hover:bg-slate-700 p-8 rounded-3xl transition-colors">
                     <i class="fab fa-github text-4xl"></i>
-                    <div>
-                        <div class="font-medium">GitHub</div>
-                        <div class="text-sm text-slate-400">Code &amp; projects</div>
-                    </div>
+                    <div><div class="font-medium">GitHub</div><div class="text-sm text-slate-400">Code & projects</div></div>
                 </a>
-                
-                <a href="mailto:maitreyi.pillai@utdallas.edu"
-                   class="flex flex-col items-center gap-y-4 bg-slate-800 hover:bg-slate-700 p-8 rounded-3xl transition-colors">
+                <a href="mailto:maitreyi.pillai@utdallas.edu" class="flex flex-col items-center gap-y-4 bg-slate-800 hover:bg-slate-700 p-8 rounded-3xl transition-colors">
                     <i class="fas fa-envelope text-4xl"></i>
-                    <div>
-                        <div class="font-medium">Email</div>
-                        <div class="text-sm text-slate-400">maitreyi.pillai@utdallas.edu</div>
-                    </div>
+                    <div><div class="font-medium">Email</div><div class="text-sm text-slate-400">maitreyi.pillai@utdallas.edu</div></div>
                 </a>
             </div>
         </div>
