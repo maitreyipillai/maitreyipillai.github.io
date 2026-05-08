@@ -188,45 +188,76 @@
     </div>
 </section>
 
-    <!-- TEACHING -->
-    <section id="teaching" class="py-24 bg-slate-100">
-        <div class="max-w-4xl mx-auto px-8">
-            <div class="text-center mb-16">
-                <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Teaching</span>
-                <h2 class="section-title mt-4">Teaching Experience</h2>
+   <section id="teaching" class="py-24 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-8">
+        <div class="text-center mb-16">
+            <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Pedagogy</span>
+            <h2 class="section-title mt-4">Teaching Experience</h2>
+        </div>
+
+        <div class="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm mb-6">
+            <button onclick="toggleElement('teaching-instructor')" class="w-full flex items-center justify-between p-8 hover:bg-slate-50 transition-all focus:outline-none">
+                <div class="text-left">
+                    <h3 class="text-xl font-bold text-slate-900">Instructor of Record</h3>
+                    <p class="text-slate-600 text-sm">Full course design and primary instruction</p>
+                </div>
+                <i id="teaching-instructor-icon" class="fas fa-plus text-slate-400 text-xs"></i>
+            </button>
+            <div id="teaching-instructor" class="hidden p-10 border-t border-slate-100 bg-white">
+                <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6">
+                    <h4 class="font-semibold text-blue-900">Fall 2026</h4>
+                    <p class="text-blue-800 italic">Course details coming soon.</p>
+                </div>
             </div>
-           
-            <div class="max-w-3xl mx-auto bg-white border border-slate-200 rounded-3xl p-10 shadow-sm">
-                <h3 class="text-2xl font-semibold text-slate-900 mb-8">Teaching Assistant • 2022 – Present</h3>
-               
-                <ul class="space-y-4 text-slate-700">
-                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PSCI 4328</span> Fake News (Spring 2026)</li>
-                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PSCI 4320</span> Political Psychology (Fall 2025)</li>
-                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">GOVT 2306</span> State and Local Government (Summer 2025)</li>
-                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PPPE 6328</span> Capstone in Cyber-Security and Policy (Spring 2025)</li>
-                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PSCI 6350</span> Logic, Methodology and Scope of Political Science (Fall 2024)</li>
-                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">GOVT 2306</span> State and Local Government (Spring 2024)</li>
-                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">PPPE 6301</span> Political Economic Theories (Fall 2023)</li>
-                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">EPPS 2301</span> Research Design in the Social and Policy Sciences (Spring 2023)</li>
-                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">GOVT 2305</span> American National Government (2 courses) (Fall 2022)</li>
-                    <li class="flex gap-4"><span class="font-medium w-52 flex-shrink-0">GOVT 2306</span> State and Local Government (Fall 2022)</li>
-                </ul>
-                <div class="mt-12 pt-10 border-t border-slate-200">
-                    <h4 class="text-xl font-semibold text-slate-900 mb-6">Guest Lectures</h4>
-                    <div class="space-y-6 text-slate-700">
-                        <div>
-                            <p><span class="font-medium">PPPE 6304 – Open-Source Intelligence for Cyber Security and Policy</span> (Spring 2025)</p>
-                            <p class="text-sm text-slate-600 mt-1">Lecture on Digital Surveillance</p>
-                        </div>
-                        <div>
-                            <p><span class="font-medium">GOVT 2306 – State and Local Government</span></p>
-                            <p class="text-sm text-slate-600 mt-1">One lecture delivered</p>
-                        </div>
+        </div>
+
+        <div class="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm mb-6">
+            <button onclick="toggleElement('teaching-guest')" class="w-full flex items-center justify-between p-8 hover:bg-slate-50 transition-all focus:outline-none">
+                <div class="text-left">
+                    <h3 class="text-xl font-bold text-slate-900">Guest Lectures</h3>
+                    <p class="text-slate-600 text-sm">Specialized topics in Cyber-Security and State Government</p>
+                </div>
+                <i id="teaching-guest-icon" class="fas fa-plus text-slate-400 text-xs"></i>
+            </button>
+            <div id="teaching-guest" class="hidden p-10 border-t border-slate-100 bg-white">
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="font-bold text-slate-900">PPPE 6304 – OSINT for Cyber Security and Policy</h4>
+                        <p class="text-slate-500">Spring 2025 • Lecture on Digital Surveillance</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-50">
+                        <h4 class="font-bold text-slate-900">GOVT 2306 – State and Local Government</h4>
+                        <p class="text-slate-500">Guest Lecture on Institutional Policy</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm mb-6">
+            <button onclick="toggleElement('teaching-ta')" class="w-full flex items-center justify-between p-8 hover:bg-slate-50 transition-all focus:outline-none">
+                <div class="text-left">
+                    <h3 class="text-xl font-bold text-slate-900">Teaching Assistant</h3>
+                    <p class="text-slate-600 text-sm">2022 – Present • Graduate & Undergraduate Courses</p>
+                </div>
+                <i id="teaching-ta-icon" class="fas fa-plus text-slate-400 text-xs"></i>
+            </button>
+            <div id="teaching-ta" class="hidden p-10 border-t border-slate-100 bg-white">
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-slate-700">
+                    <li class="flex gap-4"><span class="font-bold text-blue-800">PSCI 4328</span> Fake News (Spring 2026)</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800">PSCI 4320</span> Political Psychology (Fall 2025)</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800">GOVT 2306</span> State & Local Gov (Summer 2025)</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800">PPPE 6328</span> Cyber-Security Capstone (Spring 2025)</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800">PSCI 6350</span> Logic & Methodology (Fall 2024)</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800">GOVT 2306</span> State & Local Gov (Spring 2024)</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800">PPPE 6301</span> Political Econ Theories (Fall 2023)</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800">EPPS 2301</span> Research Design (Spring 2023)</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800">GOVT 2305</span> American Nat. Gov (Fall 2022)</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800">GOVT 2306</span> State & Local Gov (Fall 2022)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- CV -->
     <section id="cv" class="py-24 bg-white">
