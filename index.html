@@ -199,14 +199,14 @@
             <button onclick="toggleElement('teaching-instructor')" class="w-full flex items-center justify-between p-8 hover:bg-slate-50 transition-all focus:outline-none">
                 <div class="text-left">
                     <h3 class="text-xl font-bold text-slate-900">Instructor of Record</h3>
-                    <p class="text-slate-600 text-sm">Full course design and primary instruction</p>
+                    <p class="text-slate-600 text-sm">Primary instructor with full course design responsibility</p>
                 </div>
                 <i id="teaching-instructor-icon" class="fas fa-plus text-slate-400 text-xs"></i>
             </button>
             <div id="teaching-instructor" class="hidden p-10 border-t border-slate-100 bg-white">
                 <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6">
-                    <h4 class="font-semibold text-blue-900">Upcoming: Fall 2026</h4>
-                    <p class="text-blue-800 italic">Course syllabus and details will be updated here upon commencement.</p>
+                    <h4 class="font-semibold text-blue-900 text-lg">Fall 2026</h4>
+                    <p class="text-blue-800 italic mt-1">Syllabus and course materials will be updated upon commencement of the semester.</p>
                 </div>
             </div>
         </div>
@@ -215,49 +215,41 @@
             <button onclick="toggleElement('teaching-guest')" class="w-full flex items-center justify-between p-8 hover:bg-slate-50 transition-all focus:outline-none">
                 <div class="text-left">
                     <h3 class="text-xl font-bold text-slate-900">Guest Lectures & Lab Instruction</h3>
-                    <p class="text-slate-600 text-sm">Specialized instruction in Cyber-Security, Methodology, and Psychology</p>
+                    <p class="text-slate-600 text-sm">Specialized topical lectures and technical lab management</p>
                 </div>
                 <i id="teaching-guest-icon" class="fas fa-plus text-slate-400 text-xs"></i>
             </button>
             <div id="teaching-guest" class="hidden p-10 border-t border-slate-100 bg-white">
-                <div class="space-y-6">
-                    <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100">
-                        <h4 class="font-bold text-slate-900 text-lg">PSCI 6350 – Logic, Methodology and Scope of Political Science</h4>
-                        <p class="text-blue-800 font-semibold text-sm mt-1">Fall 2024 • Lab Session Instructor & Manager</p>
-                        <p class="text-slate-500 text-sm mt-2 leading-relaxed">Directed graduate-level lab sessions focusing on technical research applications and experimental scope.</p>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-                        <div>
-                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Cyber & Methodology</h4>
-                            <ul class="space-y-4 text-sm text-slate-700">
-                                <li>
-                                    <span class="font-bold text-blue-800">PPPE 6328</span> – Capstone in Cyber-Security (Spring 2025)
-                                </li>
-                                <li>
-                                    <span class="font-bold text-blue-800">PPPE 6304</span> – OSINT (Digital Surveillance Lecture)
-                                </li>
-                                <li>
-                                    <span class="font-bold text-blue-800">EPPS 2301</span> – Research Design (Spring 2023)
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Political Behavior & Gov</h4>
-                            <ul class="space-y-4 text-sm text-slate-700">
-                                <li>
-                                    <span class="font-bold text-blue-800">PSCI 4320</span> – Political Psychology (Fall 2025)
-                                </li>
-                                <li>
-                                    <span class="font-bold text-blue-800">GOVT 2306</span> – State and Local Gov (Summer 2025)
-                                </li>
-                                <li>
-                                    <span class="font-bold text-blue-800">GOVT 2306</span> – Institutional Policy Guest Sessions
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <ul class="space-y-6">
+                    <li class="border-l-4 border-blue-800 pl-6">
+                        <h4 class="font-bold text-slate-900">PSCI 4320 – Political Psychology</h4>
+                        <p class="text-slate-500">Fall 2025 • Guest Lecture</p>
+                    </li>
+                    <li class="border-l-4 border-blue-800 pl-6">
+                        <h4 class="font-bold text-slate-900">GOVT 2306 – State and Local Government</h4>
+                        <p class="text-slate-500">Summer 2025 • Guest Lecture</p>
+                    </li>
+                    <li class="border-l-4 border-blue-800 pl-6">
+                        <h4 class="font-bold text-slate-900">PPPE 6328 – Capstone in Cyber-Security and Policy</h4>
+                        <p class="text-slate-500">Spring 2025 • Guest Lecture</p>
+                    </li>
+                    <li class="border-l-4 border-blue-800 pl-6">
+                        <h4 class="font-bold text-slate-900">PPPE 6304 – OSINT for Cyber Security and Policy</h4>
+                        <p class="text-slate-500">Spring 2025 • Lecture on Digital Surveillance</p>
+                    </li>
+                    <li class="border-l-4 border-blue-800 pl-6">
+                        <h4 class="font-bold text-slate-900">PSCI 6350 – Logic, Methodology and Scope of Political Science</h4>
+                        <p class="text-slate-500">Fall 2024 • Managed and Instructed Technical Lab Sessions</p>
+                    </li>
+                    <li class="border-l-4 border-blue-800 pl-6">
+                        <h4 class="font-bold text-slate-900">EPPS 2301 – Research Design in the Social and Policy Sciences</h4>
+                        <p class="text-slate-500">Spring 2023 • Guest Lecture</p>
+                    </li>
+                    <li class="border-l-4 border-blue-800 pl-6">
+                        <h4 class="font-bold text-slate-900">GOVT 2306 – State and Local Government</h4>
+                        <p class="text-slate-500">Institutional Policy Sessions</p>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -265,22 +257,22 @@
             <button onclick="toggleElement('teaching-ta')" class="w-full flex items-center justify-between p-8 hover:bg-slate-50 transition-all focus:outline-none">
                 <div class="text-left">
                     <h3 class="text-xl font-bold text-slate-900">Teaching Assistant</h3>
-                    <p class="text-slate-600 text-sm">2022 – Present • Graduate & Undergraduate Course Support</p>
+                    <p class="text-slate-600 text-sm">2022 – Present • Comprehensive course support and student mentorship</p>
                 </div>
                 <i id="teaching-ta-icon" class="fas fa-plus text-slate-400 text-xs"></i>
             </button>
             <div id="teaching-ta" class="hidden p-10 border-t border-slate-100 bg-white">
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-slate-700">
-                    <li class="flex gap-4"><span class="font-bold text-blue-800">PSCI 4328</span> Fake News (Spring 2026)</li>
-                    <li class="flex gap-4"><span class="font-bold text-blue-800">PSCI 4320</span> Political Psychology (Fall 2025)</li>
-                    <li class="flex gap-4"><span class="font-bold text-blue-800">GOVT 2306</span> State & Local Gov (Summer 2025)</li>
-                    <li class="flex gap-4"><span class="font-bold text-blue-800">PPPE 6328</span> Cyber Capstone (Spring 2025)</li>
-                    <li class="flex gap-4"><span class="font-bold text-blue-800">PSCI 6350</span> Logic & Methodology (Fall 2024)</li>
-                    <li class="flex gap-4"><span class="font-bold text-blue-800">GOVT 2306</span> State & Local Gov (Spring 2024)</li>
-                    <li class="flex gap-4"><span class="font-bold text-blue-800">PPPE 6301</span> Political Econ Theories (Fall 2023)</li>
-                    <li class="flex gap-4"><span class="font-bold text-blue-800">EPPS 2301</span> Research Design (Spring 2023)</li>
-                    <li class="flex gap-4"><span class="font-bold text-blue-800">GOVT 2305</span> American Nat. Gov (Fall 2022)</li>
-                    <li class="flex gap-4"><span class="font-bold text-blue-800">GOVT 2306</span> State & Local Gov (Fall 2022)</li>
+                <ul class="space-y-4 text-slate-700">
+                    <li class="flex gap-4"><span class="font-bold text-blue-800 w-24 flex-shrink-0">Spring 2026</span> PSCI 4328: Fake News</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800 w-24 flex-shrink-0">Fall 2025</span> PSCI 4320: Political Psychology</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800 w-24 flex-shrink-0">Summer 2025</span> GOVT 2306: State and Local Government</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800 w-24 flex-shrink-0">Spring 2025</span> PPPE 6328: Capstone in Cyber-Security and Policy</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800 w-24 flex-shrink-0">Fall 2024</span> PSCI 6350: Logic, Methodology and Scope of Political Science</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800 w-24 flex-shrink-0">Spring 2024</span> GOVT 2306: State and Local Government</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800 w-24 flex-shrink-0">Fall 2023</span> PPPE 6301: Political Economic Theories</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800 w-24 flex-shrink-0">Spring 2023</span> EPPS 2301: Research Design in Social Sciences</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800 w-24 flex-shrink-0">Fall 2022</span> GOVT 2305: American National Government</li>
+                    <li class="flex gap-4"><span class="font-bold text-blue-800 w-24 flex-shrink-0">Fall 2022</span> GOVT 2306: State and Local Government</li>
                 </ul>
             </div>
         </div>
