@@ -242,11 +242,11 @@
 
 <section id="coursework" class="py-24 bg-slate-100">
     <div class="max-w-4xl mx-auto px-8">
-    <div class="text-center mb-12">
-    <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Coursework and More</span>
-    
-    <h2 class="section-title mt-4">Projects</h2>
-</div>
+        
+        <div class="text-center mb-12">
+            <span class="uppercase tracking-[3px] text-sm font-medium text-blue-800">Coursework and More</span>
+            <h2 class="section-title mt-4">Projects</h2>
+        </div>
 
         <div class="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm mb-6">
             <button onclick="toggleElement('db-course-content')" class="w-full flex items-center justify-between p-8 hover:bg-slate-50 transition-all focus:outline-none">
@@ -266,7 +266,7 @@
                     </button>
                     <div id="db-assignments" class="hidden p-6 border-t border-slate-100">
                         <p class="text-sm text-slate-500 italic">Assignments for this semester are currently in progress. Content will be uploaded upon completion.</p>
-                        </div>
+                    </div>
                 </div>
 
                 <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
@@ -300,11 +300,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
-</section>
+
+    </div> </section>
 
 <script>
 function toggleElement(id) {
@@ -313,7 +312,6 @@ function toggleElement(id) {
     
     if (content.classList.contains('hidden')) {
         content.classList.remove('hidden');
-        // Handle main chevron vs nested plus/minus
         if (icon.classList.contains('fa-chevron-down')) icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
         if (icon.classList.contains('fa-plus')) icon.classList.replace('fa-plus', 'fa-minus');
     } else {
