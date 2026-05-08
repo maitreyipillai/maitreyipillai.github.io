@@ -386,39 +386,60 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-950 py-12 border-t border-white/10 text-slate-400 text-sm">
-        <div class="max-w-6xl mx-auto px-8 text-center">
-            <div class="flex justify-center gap-x-8 text-2xl mb-8">
-                <a href="https://github.com/maitreyipillai" target="_blank" class="hover:text-white"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/maitreyi-p-245a63187/" target="_blank" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
-            </div>
-            <p>© 2026 Maitreyi Pillai • The University of Texas at Dallas</p>
+   <footer class="bg-slate-950 py-12 border-t border-white/10 text-slate-400 text-sm">
+    <div class="max-w-6xl mx-auto px-8 text-center">
+        <div class="flex justify-center gap-x-8 text-2xl mb-8">
+            <a href="https://github.com/maitreyipillai" target="_blank" class="hover:text-white"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/maitreyi-p-245a63187/" target="_blank" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
         </div>
-    </footer>
+        <p>© 2026 Maitreyi Pillai • The University of Texas at Dallas</p>
+    </div>
+</footer>
 
-    <script>
-        function toggleMobileMenu() {
-            document.getElementById("mobile-menu").classList.toggle("hidden");
+<script>
+    // 1. UNIVERSAL TOGGLE SCRIPT (Fixed for Dark Mode Sections)
+    function toggleElement(id) {
+        const content = document.getElementById(id);
+        const icon = document.getElementById(id + '-icon');
+        
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            // Switch icons for main chevrons or nested plus/minus
+            if (icon.classList.contains('fa-chevron-down')) icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            if (icon.classList.contains('fa-plus')) icon.classList.replace('fa-plus', 'fa-minus');
+        } else {
+            content.classList.add('hidden');
+            if (icon.classList.contains('fa-chevron-up')) icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            if (icon.classList.contains('fa-minus')) icon.classList.replace('fa-minus', 'fa-plus');
         }
-        function smoothScrollTo(section) {
-            if (section === "top") {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            } else {
-                const el = document.getElementById(section);
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-            }
+    }
+
+    // 2. MOBILE MENU
+    function toggleMobileMenu() {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+    }
+
+    // 3. SMOOTH SCROLLING
+    function smoothScrollTo(section) {
+        if (section === "top") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+            const el = document.getElementById(section);
+            if (el) el.scrollIntoView({ behavior: "smooth" });
+        }
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+        }
+    }
+
+    // 4. KEYBOARD ACCESSIBILITY
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape") {
             const mobileMenu = document.getElementById("mobile-menu");
-            if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
-                mobileMenu.classList.add("hidden");
-            }
+            if (mobileMenu && !mobileMenu.classList.contains("hidden")) mobileMenu.classList.add("hidden");
         }
-        document.addEventListener('keydown', function(e) {
-            if (e.key === "Escape") {
-                const mobileMenu = document.getElementById("mobile-menu");
-                if (mobileMenu && !mobileMenu.classList.contains("hidden")) mobileMenu.classList.add("hidden");
-            }
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
