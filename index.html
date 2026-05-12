@@ -379,16 +379,20 @@
                         </div>
 
                         <div class="rounded-xl border border-slate-700 bg-slate-900 overflow-hidden">
-                            <button onclick="toggleElement('sub-shiny')" class="w-full flex items-center justify-between p-4 hover:bg-slate-800 transition-all text-slate-300 text-sm">
-                                <span>Interactive Shiny Dashboard</span>
-                                <i id="sub-shiny-icon" class="fas fa-plus text-[10px]"></i>
-                            </button>
-                            <div id="sub-shiny" class="hidden p-2 border-t border-slate-700">
-                                <iframe src="https://maitreyipillai.shinyapps.io/ai-transfers-project/" style="width: 100%; height: 800px; border: none;" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <button onclick="toggleElement('sub-shiny')" class="w-full flex items-center justify-between p-4 hover:bg-slate-800 transition-all text-slate-300 text-sm">
+        <span>Interactive Shiny Dashboard</span>
+        <i id="sub-shiny-icon" class="fas fa-plus text-[10px]"></i>
+    </button>
+    <div id="sub-shiny" class="hidden p-2 border-t border-slate-700">
+        <iframe src="https://maitreyipillai.shinyapps.io/ai-transfers-project/" style="width: 100%; height: 800px; border: none;" allowfullscreen></iframe>
+        
+        <div class="p-4 text-center border-t border-slate-800 bg-slate-900">
+            <a href="https://maitreyipillai.shinyapps.io/ai-transfers-project/" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-all">
+                <i class="fas fa-external-link-alt mr-2"></i> Open Dashboard in Full Page
+            </a>
+        </div>
+    </div>
+</div>
 
                 <div class="rounded-2xl border border-slate-700 bg-slate-800 overflow-hidden">
                     <button onclick="toggleElement('db-final-deliverables')" class="w-full flex items-center justify-between p-5 hover:bg-slate-700 transition-all text-slate-100 font-semibold">
